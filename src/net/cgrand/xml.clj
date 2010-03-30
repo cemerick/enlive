@@ -73,7 +73,8 @@
    (doto
      (.setValidating false)
      (.setFeature "http://xml.org/sax/features/external-general-entities" false)
-     (.setFeature "http://xml.org/sax/features/external-parameter-entities" false)) 
+     (.setFeature "http://xml.org/sax/features/external-parameter-entities" false)
+     (.setFeature "http://apache.org/xml/features/nonvalidating/load-external-dtd" false))
    .newSAXParser
    (doto
      (.setProperty "http://xml.org/sax/properties/lexical-handler" ch))
